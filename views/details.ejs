@@ -9,6 +9,7 @@
   <div class="details content">
     <h2><%= blog.title %></h2>
     <div class="content">
+      <br>
       <p><%= blog.body %></p>
     </div>
     <% if (blog.person == user.email) { %> 
@@ -23,8 +24,10 @@
   <% if (links.length > 0) { %>
     <% var val = 0; %> 
     <% links.forEach(link => { %>
+      <br>
       <% if (blog._id == link.id) { %>
       <% val = val + 1; %> 
+      
         <h3><a href="<%= link.link %> "> &emsp; <%= val %> : <%= link.text %>    </a></h1> 
           <% } %>
           <% }) %>

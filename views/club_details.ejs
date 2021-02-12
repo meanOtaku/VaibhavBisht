@@ -11,18 +11,16 @@
     <div class="content">
       <p><%= club.body %></p>
     </div>
+    <br>
     <% if (club.person == user.email) { %> 
       <a class="delete" data-doc="<%= club._id %>">
         <img src="/trashcan.svg" alt="delete icon">
       </a>
     <% } %> 
 
-    
-
     <% if (links.length > 0) { %>
       <% links.forEach(link => { %>
         <% if (club._id == link.id) { %> 
-          <br>
           <iframe width="560" height="315" src="<%= link.link %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <% } %> 
                 <% }) %>
